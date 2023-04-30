@@ -1,5 +1,6 @@
 package com.api.prefeitura.medicamento.controller;
 
+import com.api.prefeitura.medicamento.model.dto.DadosIntegracaoMedicamentoPrefeitura;
 import com.api.prefeitura.medicamento.model.entity.Medicamento;
 import com.api.prefeitura.medicamento.model.service.MedicamentoService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -22,13 +23,10 @@ public class MedicamentoController {
     private MedicamentoService service;
 
 
-
-
-
-    @Operation(description = "Buscar todos os medicamentos disponíveis")
+    @Operation(description = "Buscar todos os medicamentos das unidade de saúde")
     @GetMapping
-    public ResponseEntity<Page<Medicamento>> lista(@PageableDefault(size = 15, sort = {"nome"}) Pageable paginacao) {
-        var page = service.findAll(paginacao);
+    public ResponseEntity<Page<DadosIntegracaoMedicamentoPrefeitura>> lista(@PageableDefault(size = 15, sort = {"nome"}) Pageable paginacao) {
+        var page = service.findAll(paginacao).map(DadosIntegracaoMedicamentoPrefeitura::new);
         return ResponseEntity.ok(page);
     }
 

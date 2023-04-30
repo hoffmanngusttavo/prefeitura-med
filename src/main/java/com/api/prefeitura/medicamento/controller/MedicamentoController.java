@@ -12,6 +12,7 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @Tag(name = "Medicamentos")
@@ -25,7 +26,8 @@ public class MedicamentoController {
 
     @Operation(description = "Buscar todos os medicamentos das unidade de saúde")
     @GetMapping
-    public ResponseEntity<Page<DadosIntegracaoMedicamentoPrefeitura>> lista(@PageableDefault(size = 15, sort = {"nome"}) Pageable paginacao) {
+    public ResponseEntity<Page<DadosIntegracaoMedicamentoPrefeitura>> lista(@PageableDefault(size = 15, sort = {"nome"}) Pageable paginacao,
+                                                                            @RequestParam(defaultValue = "") String data) {
         var page = service.findAll(paginacao).map(DadosIntegracaoMedicamentoPrefeitura::new);
         return ResponseEntity.ok(page);
     }

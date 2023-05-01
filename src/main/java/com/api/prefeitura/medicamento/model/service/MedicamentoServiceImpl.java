@@ -10,6 +10,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+
 @Service
 @Transactional(readOnly = true, propagation = Propagation.REQUIRED)
 public class MedicamentoServiceImpl implements MedicamentoService {
@@ -19,7 +23,12 @@ public class MedicamentoServiceImpl implements MedicamentoService {
 
 
     @Override
-    public Page<Medicamento> findAll(Pageable paginacao) {
-        return repository.findAll(paginacao);
+    public Page<Medicamento> findAllByDataUltimaAtualizacao(Pageable paginacao, LocalDate dataUltimaAtualizacao) {
+        LocalDateTime dataHora = null;
+        if(dataUltimaAtualizacao != null){
+            LocalTime hora = LocalTime.of(0,0,0);
+            dataHora = LocalDateTime.of(dataUltimaAtualizacao, hora);
+        }
+        return repository.findAllByDataUltimaAtualizacao(paginacao, dataHora);
     }
 }

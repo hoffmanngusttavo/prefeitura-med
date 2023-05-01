@@ -19,7 +19,7 @@ CREATE TABLE medicamentos
     disponivel  tinyint  not null,
     miligramas  decimal not null,
     data_ultima_atualizacao  datetime not null,
-    uuid  varchar(100) not null,
+    uuid  varchar(100) not null unique,
     ubs_id bigint   not null,
 
     primary key (id),

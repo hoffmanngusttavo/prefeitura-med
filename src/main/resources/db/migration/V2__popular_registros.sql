@@ -34,4 +34,4 @@ INSERT INTO prefeitura_api.medicamentos (nome, laboratorio, disponivel, miligram
 VALUES('Carisoprodol', 'Santa', 1, 10, now(), '3ca893d1-a5eb-4efd-910e-fc6032fc2fc8', 2);
 
 INSERT INTO prefeitura_api.medicamentos (nome, laboratorio, disponivel, miligramas, data_ultima_atualizacao, uuid, ubs_id)
-VALUES('Celecoxibe', 'Santa', 1, 10, now(), '3ca893d1-a5eb-4efd-910e-fc6032fc2fc8', 2);
+VALUES('Celecoxibe', 'Santa', 1, 10, now(), 'ef7d8779-8cd6-45a1-a69f-30896e463542', 2);

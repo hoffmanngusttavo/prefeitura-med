@@ -35,8 +35,10 @@ public class TransacaoCNAB {
 
     private LocalTime hora;
 
+    @Column(name = "dono_loja")
     private String donoDaLoja;
 
+    @Column(name = "nome_loja")
     private String nomeDaLoja;
 
 

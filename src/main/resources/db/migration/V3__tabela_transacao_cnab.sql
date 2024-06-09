@@ -1,6 +1,6 @@
 CREATE TABLE transacao
 (
-    id        bigint       not null auto_increment,
+    id        bigserial       PRIMARY KEY,
     tipo      bigint       not null,
     data      date         not null,
     valor     decimal      not null,
@@ -8,8 +8,6 @@ CREATE TABLE transacao
     cartao    varchar(100) null,
     hora      time         not null,
     dono_loja varchar(255) not null,
-    nome_loja varchar(255) not null,
-
-    primary key (id)
+    nome_loja varchar(255) not null
 );
 

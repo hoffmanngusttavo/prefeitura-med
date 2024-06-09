@@ -1,6 +1,6 @@
 package com.api.prefeitura.medicamento.controller;
 
-import com.api.prefeitura.medicamento.model.dto.DadosIntegracaoMedicamentoPrefeitura;
+import com.api.prefeitura.medicamento.model.dto.saude.DadosIntegracaoMedicamentoPrefeitura;
 import com.api.prefeitura.medicamento.model.service.MedicamentoService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;

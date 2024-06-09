@@ -1,6 +1,6 @@
 package com.api.prefeitura.medicamento.config.batch.writers;
 
-import com.api.prefeitura.medicamento.model.dto.TransacaoDTO;
+import com.api.prefeitura.medicamento.model.dto.cnab.TransacaoDTO;
 import org.springframework.batch.item.database.JdbcBatchItemWriter;
 import org.springframework.batch.item.database.builder.JdbcBatchItemWriterBuilder;
 import org.springframework.context.annotation.Bean;

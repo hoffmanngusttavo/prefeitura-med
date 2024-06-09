@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.api.prefeitura</groupId>
-	<artifactId>medicamento</artifactId>
+	<artifactId>prefeitura-med</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>medicamento</name>
 	<description>Demo project for Spring Boot</description>
@@ -69,13 +69,8 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.flywaydb</groupId>
-			<artifactId>flyway-mysql</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>com.mysql</groupId>
-			<artifactId>mysql-connector-j</artifactId>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 

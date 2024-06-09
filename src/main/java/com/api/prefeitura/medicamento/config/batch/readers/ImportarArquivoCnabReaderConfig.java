@@ -1,6 +1,6 @@
 package com.api.prefeitura.medicamento.config.batch.readers;
 
-import com.api.prefeitura.medicamento.model.dto.TransacaoCNABDTO;
+import com.api.prefeitura.medicamento.model.dto.cnab.TransacaoCNABDTO;
 import org.springframework.batch.core.configuration.annotation.StepScope;
 import org.springframework.batch.item.file.FlatFileItemReader;
 import org.springframework.batch.item.file.builder.FlatFileItemReaderBuilder;

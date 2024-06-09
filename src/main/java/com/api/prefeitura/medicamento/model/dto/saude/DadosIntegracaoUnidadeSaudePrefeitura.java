@@ -1,4 +1,4 @@
-package com.api.prefeitura.medicamento.model.dto;
+package com.api.prefeitura.medicamento.model.dto.saude;
 
 import com.api.prefeitura.medicamento.model.entity.UnidadeBasicaSaude;
 

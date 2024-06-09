@@ -1,5 +1,6 @@
-package com.api.prefeitura.medicamento.model.service;
+package com.api.prefeitura.medicamento.model.service.impl;
 
+import com.api.prefeitura.medicamento.model.service.CnabService;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobParametersBuilder;
 import org.springframework.batch.core.launch.JobLauncher;
@@ -14,7 +15,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 @Service
-public class CnabServiceImpl implements CnabService{
+class CnabServiceImpl implements CnabService {
 
 
     private final Path fileStorageLocation;

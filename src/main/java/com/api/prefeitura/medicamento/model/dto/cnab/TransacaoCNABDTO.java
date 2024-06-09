@@ -1,4 +1,4 @@
-package com.api.prefeitura.medicamento.model.dto;
+package com.api.prefeitura.medicamento.model.dto.cnab;
 
 import java.math.BigDecimal;
 

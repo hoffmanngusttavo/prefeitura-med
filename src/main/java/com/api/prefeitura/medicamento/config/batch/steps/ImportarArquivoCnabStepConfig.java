@@ -1,7 +1,7 @@
 package com.api.prefeitura.medicamento.config.batch.steps;
 
-import com.api.prefeitura.medicamento.model.dto.TransacaoCNABDTO;
-import com.api.prefeitura.medicamento.model.dto.TransacaoDTO;
+import com.api.prefeitura.medicamento.model.dto.cnab.TransacaoCNABDTO;
+import com.api.prefeitura.medicamento.model.dto.cnab.TransacaoDTO;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.batch.core.step.builder.StepBuilder;

@@ -19,11 +19,8 @@ public class CnabController {
 
     @PostMapping("/upload")
     public String importarArquivo(@RequestParam("file") MultipartFile file) throws Exception {
-
         service.updloadCnabFile(file);
-
-        System.out.println(file.getOriginalFilename());
-        return "ok";
+        return "Processamento iniciado com sucesso";
     }
 
 }
